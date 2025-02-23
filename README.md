@@ -1,2 +1,1 @@
-# alphatech
-web alphatech
+alphatech.github.io
