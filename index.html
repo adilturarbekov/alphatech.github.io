@@ -374,7 +374,7 @@
             position: fixed;
             top: 20px;
             right: 20px;
-            z-index: 1001; /* Увеличиваем z-index, чтобы кнопка была поверх навигации */
+            z-index: 1000;
         }
         .theme-switcher button {
             background-color: #007BFF;
@@ -435,17 +435,12 @@
                 flex-direction: column;
                 width: 100%;
                 display: none; /* Скрываем меню по умолчанию */
-                max-height: 60vh; /* Ограничиваем высоту меню */
-                overflow-y: auto; /* Добавляем прокрутку, если меню слишком длинное */
             }
             nav ul.active {
                 display: flex; /* Показываем меню при активации */
             }
             nav ul li {
                 margin: 10px 0;
-            }
-            nav ul li a {
-                font-size: 1em; /* Уменьшаем размер шрифта */
             }
             .container {
                 width: 95%;
