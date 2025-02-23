@@ -374,7 +374,7 @@
             position: fixed;
             top: 20px;
             right: 20px;
-            z-index: 1000;
+            z-index: 1001; /* Увеличиваем z-index, чтобы кнопка была поверх навигации */
         }
         .theme-switcher button {
             background-color: #007BFF;
@@ -435,6 +435,8 @@
                 flex-direction: column;
                 width: 100%;
                 display: none; /* Скрываем меню по умолчанию */
+                max-height: 60vh; /* Ограничиваем высоту меню */
+                overflow-y: auto; /* Добавляем прокрутку, если меню слишком длинное */
             }
             nav ul.active {
                 display: flex; /* Показываем меню при активации */
@@ -442,12 +444,20 @@
             nav ul li {
                 margin: 10px 0;
             }
+            nav ul li a {
+                font-size: 1em; /* Уменьшаем размер шрифта */
+            }
             .container {
                 width: 95%;
                 padding: 10px;
             }
             h2 {
-                font-size: 2em;
+                font-size: 1.8em; /* Уменьшаем размер заголовка */
+                margin: 20px 0; /* Уменьшаем отступы */
+            }
+            p {
+                font-size: 1em; /* Уменьшаем размер текста */
+                line-height: 1.5; /* Улучшаем читаемость */
             }
             .services {
                 flex-direction: column;
@@ -491,6 +501,16 @@
                 background-color: #0056b3;
             }
         }
+
+        /* Новые стили для ПК-версии */
+        @media (min-width: 769px) {
+            .menu-toggle {
+                display: none; /* Скрываем гамбургер на ПК */
+            }
+            nav ul {
+                display: flex !important; /* Всегда показываем меню на ПК */
+            }
+        }
     </style>
 </head>
 <body>
@@ -519,7 +539,7 @@
 </nav>
 
 <header id="home">
-    <img src="img/logo.png" alt="Логотип AlphaTech" class="logo-small">
+    <img src="img/logo-small.png" alt="Логотип AlphaTech" class="logo-small">
     <h1>AlphaTech</h1>
     <p>Профессиональные решения для видеонаблюдения, пожарной безопасности, домофонии и СКУД</p>
 </header>
