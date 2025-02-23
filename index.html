@@ -374,7 +374,7 @@
             position: fixed;
             top: 20px;
             right: 20px;
-            z-index: 1000;
+            z-index: 1001; /* Увеличиваем z-index, чтобы кнопка была поверх навигации */
         }
         .theme-switcher button {
             background-color: #007BFF;
@@ -435,12 +435,17 @@
                 flex-direction: column;
                 width: 100%;
                 display: none; /* Скрываем меню по умолчанию */
+                max-height: 60vh; /* Ограничиваем высоту меню */
+                overflow-y: auto; /* Добавляем прокрутку, если меню слишком длинное */
             }
             nav ul.active {
                 display: flex; /* Показываем меню при активации */
             }
             nav ul li {
                 margin: 10px 0;
+            }
+            nav ul li a {
+                font-size: 1em; /* Уменьшаем размер шрифта */
             }
             .container {
                 width: 95%;
@@ -519,7 +524,7 @@
 </nav>
 
 <header id="home">
-    <img src="img/logo.png" alt="Логотип AlphaTech" class="logo-small">
+    <img src="img/logo-small.png" alt="Логотип AlphaTech" class="logo-small">
     <h1>AlphaTech</h1>
     <p>Профессиональные решения для видеонаблюдения, пожарной безопасности, домофонии и СКУД</p>
 </header>
