@@ -415,13 +415,13 @@
         /* Мобильная версия */
         @media (max-width: 768px) {
             header {
-                padding: 20px 0;
+                padding: 20px 10px; /* Уменьшаем отступы */
             }
             header h1 {
-                font-size: 1.5em;
+                font-size: 1.5em; /* Уменьшаем размер заголовка */
             }
             header p {
-                font-size: 0.9em;
+                font-size: 0.9em; /* Уменьшаем размер текста */
             }
             nav {
                 flex-direction: column;
@@ -499,6 +499,26 @@
             }
             .menu-toggle:hover {
                 background-color: #0056b3;
+            }
+            /* Стили для footer */
+            footer {
+                padding: 20px 10px; /* Уменьшаем отступы */
+            }
+            .footer-links {
+                flex-direction: column; /* Размещаем ссылки вертикально */
+                gap: 10px; /* Уменьшаем расстояние между ссылками */
+            }
+            .footer-links a {
+                font-size: 1em; /* Уменьшаем размер шрифта */
+            }
+            .social-links {
+                margin-top: 10px; /* Уменьшаем отступ */
+            }
+            .social-links a {
+                font-size: 1.2em; /* Уменьшаем размер иконок */
+            }
+            footer p {
+                font-size: 0.9em; /* Уменьшаем размер текста */
             }
         }
 
